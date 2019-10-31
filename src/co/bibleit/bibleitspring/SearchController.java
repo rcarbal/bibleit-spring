@@ -9,6 +9,6 @@ public class SearchController {
 	
 	@RequestMapping("/")
 	public String showPage() {
-		return "search-word";
+		return "word-search";
 	}
 }
