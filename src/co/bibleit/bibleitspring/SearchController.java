@@ -11,4 +11,9 @@ public class SearchController {
 	public String showPage() {
 		return "word-search";
 	}
+	
+	@RequestMapping("/processSearch")
+	public String processSerch() {
+		return "word-search-results";
+	}
 }
