@@ -13,6 +13,8 @@
 			<input type="text" name="search" placeholder="Search bible for word" />
 			<input type="submit"/>
 		</form>
+		
+		<script src="${pageContext.request.contextPath}/resources/js/wordSearch.js" charset="utf-8"></script>
 	</body>
 
 </html>
