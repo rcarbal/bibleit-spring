@@ -15,6 +15,9 @@
 		
 		<br/>
 		Result for: ${ param.search }
+		<br/>
+		${ result }
+		</br>
 		<h2>Exact Search Result</h2>
 		<h2>In-exact Search Results</h2>
 	</body>
