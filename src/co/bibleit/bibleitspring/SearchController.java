@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 // this class is suppose to replicate the HomeController class
+// Add parent mapping
 @Controller
+@RequestMapping("/search")
 public class SearchController {
 	
-	@RequestMapping("/")
+	@RequestMapping("/wordSearch")
 	public String showPage() {
 		return "word-search";
 	}

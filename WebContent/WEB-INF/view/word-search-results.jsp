@@ -5,7 +5,7 @@
 	</head>
 	
 	<body>
-		<a href="/">Bible-it</a>
+		<a href="wordSearch">Bible-it</a>
 		<h1>Bible-it Word Search</h1>
 		
 		<form action="processSearch" method="GET">
