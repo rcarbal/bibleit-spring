@@ -8,7 +8,15 @@
 	
 	<body>
 	
-	<a href="wordSearch">Bible-it</a>
+		<a href="wordSearch">Bible-it</a>
+		</br>
+		Login:
+		<form:select path="search"> 
+	 		<form:options items="${theLoginOptions}" />
+		</form:select>
+		
+	
+	
 		<h1>Bible-it Word Search</h1>
 		
 		<form:form action="processSearch" modelAttribute="search" method="GET">
