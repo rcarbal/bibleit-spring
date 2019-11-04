@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,21 +7,26 @@
 	</head>
 	
 	<body>
-		<a href="wordSearch">Bible-it</a>
+	
+	<a href="wordSearch">Bible-it</a>
 		<h1>Bible-it Word Search</h1>
 		
-		<form action="processSearch" method="GET">
-			<input type="text" name="search" placeholder="Search bible for word" />
-			<input type="submit"/>
-		</form>
+		<form:form action="processSearch" modelAttribute="search" method="GET">
+			<form:input type="text" path="search" placeholder="Search bible for word" />
+			<form:select path="searchType">
+				<form:option value="exact" label="exact" />
+				<form:option value="inexact" label="inexact" />
+			</form:select>
+			<input type="submit" value="Submit"/>
+		</form:form>
 		
 		<br/>
-		Result for: ${ param.search }
+		Result for: ${ search.search }
+		
 		<br/>
-		${ result }
 		</br>
-		<h2>Exact Search Result</h2>
-		<h2>In-exact Search Results</h2>
+		Search type: ${ search.searchType }
+		<script src="${pageContext.request.contextPath}/resources/js/wordSearch.js" charset="utf-8"></script>
 	</body>
 
 </html>
