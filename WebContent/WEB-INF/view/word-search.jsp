@@ -14,8 +14,7 @@
 		<form:form action="processSearch" modelAttribute="search" method="GET">
 			<form:input type="text" path="search" placeholder="Search bible for word" />
 			<form:select path="searchType">
-				<form:option value="exact" label="exact" />
-				<form:option value="inexact" label="inexact" />
+				<form:options items="${search.searchOptions}"/>
 			</form:select>
 			<input type="submit" value="Submit"/>
 		</form:form>

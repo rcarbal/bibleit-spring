@@ -8,10 +8,14 @@ public class Search {
 	private String search;
 	private String searchType;
 	
-	
+	// Collection of named value pairs
+	private LinkedHashMap<String, String> searchOptions;
 	
 	public Search() {
-		
+		// populate search types
+		searchOptions = new LinkedHashMap<>();
+		searchOptions.put("exact", "Exact");
+		searchOptions.put("inexact", "In-exact");
 	}
 
 	public String getSearch() {
@@ -28,6 +32,16 @@ public class Search {
 
 	public void setSearchType(String searchType) {
 		this.searchType = searchType;
+	}
+
+	public LinkedHashMap<String, String> getSearchOptions() {
+		return searchOptions;
+	}
+
+	public void setSearchOptions(LinkedHashMap<String, String> searchOptions) {
+		this.searchOptions = searchOptions;
 	}	
+	
+	
 	
 }
