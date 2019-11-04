@@ -13,13 +13,16 @@
 		Login:
 		<form:select path="search"> 
 	 		<form:options items="${theLoginOptions}" />
-		</form:select>
-		
+		</form:select>		
 	
 	
 		<h1>Bible-it Word Search</h1>
 		
 		<form:form action="processSearch" modelAttribute="search" method="GET">
+			Language: 
+			English <form:radiobutton path="language" value="English"/>
+			Spanish <form:radiobutton path="language" value="Spanish"/>
+			</br>
 			<form:input type="text" path="search" placeholder="Search bible for word" />
 			<form:select path="searchType">
 				<form:options items="${search.searchOptions}"/>

@@ -8,8 +8,8 @@ public class Search {
 	
 	private String search;
 	private String searchType;	
-	// Collection of named value pairs
 	private LinkedHashMap<String, String> searchOptions;
+	private String language;
 	
 	public Search() {
 		// populate search types
@@ -40,6 +40,14 @@ public class Search {
 
 	public void setSearchOptions(LinkedHashMap<String, String> searchOptions) {
 		this.searchOptions = searchOptions;
+	}
+
+	public String getLanguage() {
+		return language;
+	}
+
+	public void setLanguage(String language) {
+		this.language = language;
 	}	
 	
 	
