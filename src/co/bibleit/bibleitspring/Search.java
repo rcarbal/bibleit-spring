@@ -9,6 +9,7 @@ public class Search {
 	private String search;
 	private String searchType;	
 	private LinkedHashMap<String, String> searchOptions;
+	private LinkedHashMap<String, String> languageOptions;
 	private String language;
 	
 	public Search() {
@@ -16,6 +17,11 @@ public class Search {
 		searchOptions = new LinkedHashMap<>();
 		searchOptions.put("exact", "Exact");
 		searchOptions.put("inexact", "In-exact");
+		
+		// populate language options
+		languageOptions = new LinkedHashMap<>();
+		languageOptions.put("english", "English");
+		languageOptions.put("spanish", "Spanish");
 	}
 
 	public String getSearch() {
@@ -48,8 +54,15 @@ public class Search {
 
 	public void setLanguage(String language) {
 		this.language = language;
-	}	
+	}
+
+	public LinkedHashMap<String, String> getLanguageOptions() {
+		return languageOptions;
+	}
+
+	public void setLanguageOptions(LinkedHashMap<String, String> languageOptions) {
+		this.languageOptions = languageOptions;
+	}
 	
-	
-	
+		
 }

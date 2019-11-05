@@ -19,10 +19,8 @@
 		
 		<form:form action="processSearch" modelAttribute="search" method="GET">
 			<!-- Favorite Language -->
-			Language: ${ search.language } 
+			
 			</br>
-			English <form:radiobutton path="language" value="English"/>
-			Spanish <form:radiobutton path="language" value="Spanish"/>
 			</br>
 			<form:input type="text" path="search" placeholder="Search bible for word" />
 			<form:select path="searchType">
