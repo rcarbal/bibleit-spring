@@ -4,6 +4,10 @@
 <html>
 	<head>
 		<title>Bibleit Search</title>
+		
+		<style>
+			.error {color:red}
+		</style>
 	</head>
 	
 	<body>
@@ -22,7 +26,10 @@
 			Language: 
 			<form:radiobuttons path="" items="${search.languageOptions}"/>
 			</br>
+			
 			<form:input type="text" path="search" placeholder="Search bible for word" />
+			<form:errors path="search" cssClass="error" />
+			
 			<form:select path="searchType">
 				<form:options items="${search.searchOptions}"/>
 			</form:select>
