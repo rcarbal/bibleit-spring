@@ -1,4 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!-- This tag is to use the the for loop -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -7,9 +9,10 @@
 	</head>
 	
 	<body>
+
 	
 		<a href="wordSearch">Bible-it</a>
-			</br>
+			<br/>
 		Login:
 		<form:select path="search"> 
 	 		<form:options items="${theLoginOptions}" />
@@ -20,8 +23,8 @@
 		<form:form action="processSearch" modelAttribute="search" method="GET">
 			<!-- Favorite Language -->
 			
-			</br>
-			</br>
+			<br/>
+			<br/>
 			<form:input type="text" path="search" placeholder="Search bible for word" />
 			<form:select path="searchType">
 				<form:option value="exact" label="exact" />
@@ -34,7 +37,7 @@
 		Result for: ${ search.search }
 		
 		<br/>
-		</br>
+		<br/>
 		Search type: ${ search.searchType }
 		<script src="${pageContext.request.contextPath}/resources/js/wordSearch.js" charset="utf-8"></script>
 	</body>
